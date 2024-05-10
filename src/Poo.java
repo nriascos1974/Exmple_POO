@@ -1,17 +1,19 @@
 public class Poo {
     public static void main(String[] args) throws Exception {
 
-        Persona persona1 = new Persona("Nestor Jair", "Riasco Mosquera", 49, "Ingenieria de Sistemas", 5, false);
+        Animal animal = new Animal("Leon", 15);
+        Gato gato = new Gato("Katty", 5);
+        Perro perro = new Perro("Firulais", 15);
 
-        Persona persona2 = new Persona("Catalina", "Reteria", 24, "Arquitectura", 5, true);
+        System.out.println(
+                "El animal de nombre " + animal.nombre + " tiene " + animal.edad + " años. " + animal.hacerSonido());
 
-        System.out.println(persona1.nombreCompleto() + ", tiene " + persona1.edad + " de edad y su profesion es "
-                + persona1.educacion.programa);
-        System.out.println(persona1.enviarSaludo("Cristina Rua"));
+        System.out
+                .println("El animal de nombre " + gato.nombre + " tiene " + gato.edad + " años. " + gato.hacerSonido());
 
-        System.out.println(persona2.nombreCompleto() + ", tiene " + persona2.edad + " de edad y su profesion es "
-                + persona2.educacion.programa);
-        System.out.println(persona2.enviarSaludo("Antonio Penagos"));
+        System.out.println(
+                "El animal de nombre " + perro.nombre + " tiene " + perro.edad + " años. " + perro.hacerSonido());
 
+        System.out.println("Se crearon " + Animal.countAnimales + " animales");
     }
 }
